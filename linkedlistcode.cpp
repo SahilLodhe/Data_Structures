@@ -310,7 +310,7 @@ bool check_element(Node *head, int data)
 bool check_element_through_recursion(Node *head, int data)
 {
     //base case
-    if (head->next == NULL)
+    if (head == NULL)
     {
         cout << "element isn't present (by the use of recursion) " << endl;
         return false;
