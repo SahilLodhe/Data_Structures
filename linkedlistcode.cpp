@@ -245,32 +245,6 @@ Node *delete_ith_node(Node *head, int pos)
     return head;
 }
 
-//Node *delete_from_end(Node *head, int pos)
-//{
-//    Node *temp = head;
-//    if (pos > (length(head) - 1) && pos < 0)
-//    {
-//        cout << "element cannot be deleted " << endl;
-//        return head;
-//    }
-//    if (pos == (length(head - 1)) && head)
-//    {
-//        return head->next;
-//    }
-//    int count = 0;
-//    while (count <= (length(head) - pos - 2) && temp)
-//    {
-//        temp - temp->next;
-//        count++;
-//    }
-//    if (temp && temp->next)
-//    {
-//        temp->next = temp->next->next;
-//        return head;
-//    }
-//    return head;
-//}
-
 Node *replace_index_element(Node *head, int pos, int num)
 {
     Node *temp = head;
@@ -393,12 +367,7 @@ int main()
             cout << endl;
             cout << "Enter data ";
             cin >> data_insert;
-            //if (pos_insert == length(head))
-            //{
-            //    head = insert_at_end(head, data_insert);
-            //    cout << "Your updated linked list is : " << endl;
-            //    print(head);
-            //}
+
             if (pos_insert != 0)
             {
                 head = insert_ith_position(head, pos_insert, data_insert);
@@ -464,14 +433,6 @@ int main()
             cout << "the middle element of the linked list is : " << endl;
             middle_element(head);
             break;
-            //case 11:
-            //    cout << "enter the position of the node which you want to delete from the end " << endl;
-            //    int pos_del_from_end;
-            //    cin >> pos_del_from_end;
-            //    delete_from_end(head, pos_del_from_end);
-            //    cout << "your update linked list is : " << endl;
-            //    print(head);
-            //    break;
 
         default:
             cout << "Enter a valid input!" << endl;
