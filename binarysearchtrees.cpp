@@ -1,173 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-//
-//class BSTNode
-//{
-//    public:
-//
-//    int data;
-//    BSTNode*root;
-//    BSTNode *left;
-//    BSTNode *right;
-//    BSTNode(){
-//        root = NULL;
-//    }
-//    BSTNode(int data)
-//    {
-//        this->data = data;
-//        left = NULL;
-//        right = NULL;
-//    }
-//    ~BSTNode(){
-//        delete left;
-//        delete right;
-//    }
-//    bool hasData(BSTNode*node, int data)
-//    {
-//        if (node == NULL)
-//        {
-//            return false;
-//        }
-//        if (node->data == data)
-//        {
-//            return true;
-//        }
-//
-//        if (node->data > data)
-//        {
-//            return hasData(node->left, data);
-//        }
-//        else
-//        {
-//            return hasData(node->right, data);
-//        }
-//    }
-//};
-//
-//
-//
-//
-//BSTNode *make_BST(vector arr, int start, int end)
-//{
-//    //base case
-//    if (start > end)
-//    {
-//        return NULL;
-//    }
-//    int mid = (start + end) / 2;
-//    BSTNode *root = new BSTNode(arr[mid]);
-//    root->left = make_BST(arr, start, mid - 1);
-//    root->right = make_BST(arr, mid + 1, end);
-//    return root;
-//}
-//BSTNode *sortedarray(vector &nums)
-//{
-//    int n = nums.size();
-//    return make_BST(nums, 0, n - 1);
-//}
-//void bst_print(BSTNode *root)
-//{
-//    queue<BSTNode *> q;
-//    q.push(root);
-//    q.push(NULL);
-//    while (!q.empty())
-//    {
-//        BSTNode *f = q.front();
-//        q.pop();
-//        if (f == NULL)
-//        {
-//            cout << endl;
-//            if (!q.empty())
-//            {
-//                q.push(NULL);
-//            }
-//        }
-//        else
-//        {
-//            cout << f->data << " ";
-//            if (f->left)
-//            {
-//                q.push(f->left);
-//            }
-//            if (f->right)
-//            {
-//                q.push(f->right);
-//            }
-//        }
-//    }
-//}
-//void print_recursive(BSTNode *root)
-//{
-//    if (root == NULL)
-//    { //in case of binary tree, it is mandatory to write the base case ..... in generic tree, there were vectors, they acted as base cases because their size would be zero
-//        return;
-//    }
-//    cout << root->data << " -> "; //prints the nodes first
-//    if (root->left != NULL)
-//    {
-//        cout << "Left : " << root->left->data;
-//    }
-//    cout << " ";
-//    if (root->right != NULL)
-//    {
-//        cout << "Right : " << root->right->data;
-//    }
-//    cout << endl;
-//    print_recursive(root->left);
-//    print_recursive(root->right);
-//}
-
-//void  {
-//    queue<BST*>q;//take a queue and print it
-//    q.push(root);
-//    q.push(NULL);
-//    while(!q.empty()){
-//        BST*f = q.front();
-//        q.pop();
-//        if(f == NULL){
-//            cout<<endl;
-//            if(!q.empty()){
-//                q.push(NULL);
-//            }
-//        }
-//        else{
-//            cout<<f->data<<" ";
-//            if(f->left){
-//                q.push(f->left);
-//            }
-//            if(f->right){
-//                q.push(f->right);
-//            }
-//        }
-//    }
-//}
-
-//#include <iostream>
-//using namespace std;
-//
-//template <typename T>
-//class BST
-//{
-//public:
-//    T data;
-//    BST *left;
-//    BST *right;
-//
-//    BST(T data)
-//    {
-//        this->data = data;
-//        left = NULL;
-//        right = NULL;
-//    }
-//    ~BST()
-//    {
-//        delete left;
-//        delete right;
-//    }
-//};
-
-#include <iostream>
-using namespace std;
 
 template <typename T>
 class BTNode
@@ -207,18 +39,6 @@ class BST
         { /// base case
             return;
         }
-
-        //cout << root->data << ": ";
-        //if (root->left != NULL)
-        //{
-        //    cout << "L" << root->left->data;
-        //}
-//
-        //if (root->right != NULL)
-        //{
-        //    cout << "R" << root->right->data;
-        //}
-        //cout << endl;
 
         printTree(root->left);
         cout << root->data << ": ";
@@ -400,30 +220,7 @@ int main()
     b.insert(7);
     b.insert(3);
     b.insert(15);
-//
     b.print();
-//
-    //b.deleteData(10);
-    //cout << endl;
-//
-    //b.print();
-    //b.deleteData(5);
-    //cout << endl;
-//
-    //b.print();
-    //b.deleteData(100);
-    //cout << endl;
-    //b.print();
-//
-    //cout << "deleting 7" << endl;
-    //b.deleteData(7);
-    //cout << endl;
-    //b.print();
-//
-    //cout << "deleting 20" << endl;
-    //b.deleteData(20);
-    //cout << endl;
-    //b.print();
     BTNode<int>*head = b.convert_to_LL();
     BTNode<int>*tmp = head;
     while(tmp!=NULL){
@@ -433,12 +230,3 @@ int main()
     cout<<"NULL";
     return 0;
 }
-
-//int main()
-//{
-//    int n = 11;
-//    vector arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-//    BSTNode *root = sortedarray(arr);
-//    bst_print(root);
-//    return 0;
-//}
